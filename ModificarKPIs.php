@@ -308,33 +308,8 @@ $kpi_id = $_GET['Id'];
 
 
 
-            <br />
-            <label for="Nombre">Empresa a la que pertenece</label>
-            <br />
-            <select name="empresa" class="from-control" id="nombre">
-              <option value=""> Selecciona </option>
-              <?php
-              include 'conexion.php';
-              $consulta = "SELECT * FROM empresa";
-              $ejecutar = mysqli_query($mysqli, $consulta);
-
-              ?>
-
-              <?php foreach ($ejecutar as $opciones) :  ?>
-                <?php if ($opciones['id'] == $kpi["empresa_id"]) { ?>
-                  <option value="<?php echo $opciones['id'] ?>" selected><?php echo $opciones['nombre'] ?></option>
-                <?php } else { ?>
-                  <option value="<?php echo $opciones['id'] ?>"><?php echo $opciones['nombre'] ?></option>
-                <?php } ?>
-
-
-
-              <?php endforeach ?>
-
-            </select>
-            <br />
-            <br />
-
+            
+          
 
 
 
