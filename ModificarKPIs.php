@@ -292,27 +292,7 @@ $kpi_id = $_GET['Id'];
 <input type="hidden" value= "<?php echo $kpi['id'] ?>" name= "id" >
             <!-- <div id="usuarios"></div> -->
 
-            <br />
-            <label for="Nombre">Nombre del Usuario</label>
-            <br />
-            <select name="nombre" class="from-control" id="nombre">
-              <option value=""> Selecciona </option>
-              <?php
-              include 'conexion.php';
-              $consulta = "SELECT * FROM usuarios";
-              $ejecutar = mysqli_query($mysqli, $consulta);
-
-              ?>
-
-              <?php foreach ($ejecutar as $opciones) :  ?>
-                <?php if ($opciones['id'] == $kpi["usuario_id"]) { ?>
-                  <option value="<?php echo $opciones['id'] ?>" selected><?php echo $opciones['usuario'] ?></option>
-                <?php } else { ?>
-                  <option value="<?php echo $opciones['id'] ?>"><?php echo $opciones['usuario'] ?></option>
-                <?php } ?>
-              <?php endforeach ?>
-
-            </select>
+         
             <br />
             <br />
 
