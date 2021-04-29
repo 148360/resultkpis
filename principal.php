@@ -43,11 +43,13 @@ $rol = $_SESSION['rol'];
 
             <!-- Barra lateral: marca -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="principal.php">
-                <div class="sidebar-brand-icon rotate-n-15">
+            <div> <img src="logore.jpg"  width="70%" height="100%" > </div>
+               <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <!--   <i class="fas fa-laugh-wink"></i> -->
-                    <i class="C:\xampp\htdocs\kpi\img\logo"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Result KPIs START <sup>2</sup></div>
+                   <!--   <i class="C:\xampp\htdocs\kpi\img\logo"></i> -->
+                   
+                  
+                <div class="sidebar-brand-text mx-3"> <sup></sup></div>
             </a>
             <!--
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="~/home/index">
@@ -461,7 +463,6 @@ height="520" >
                         <script src="Highcharts-9.0.1/code/modules/exporting.js"></script>
                         <script src="Highcharts-9.0.1/code/modules/export-data.js"></script>
                         <script src="Highcharts-9.0.1/code/modules/accessibility.js"></script>
-
                         <figure class="highcharts-figure">
                             <div id="container"></div>
                             <p class="highcharts-description">
@@ -476,6 +477,7 @@ height="520" >
 
                         <?php
                         include "conexiongraf.php";
+                        
                         $query = "SELECT 
                         kpi.id, 
                         nombre,	 	

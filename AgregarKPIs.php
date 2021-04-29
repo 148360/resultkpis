@@ -134,14 +134,14 @@ $rol = $_SESSION['rol'];
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
           <!-- Barra superior) --> <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
           </button>
-          <!-- Búsqueda de barra superior -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group"> <input class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2" type="text">
+          <!-- Búsqueda de barra superior 
+          <form class="">
+          <div class="input-group"> <input class="" placeholder="" aria-label="" aria-describedby="basic-addon2" type="text">
               <div class="input-group-append"> <button class="btn btn-primary" type="button"> <i class="fas fa-search fa-sm"></i> </button>
               </div>
             </div>
           </form>
-          <!-- Barra superior de navegación -->
+          Barra superior de navegación -->
           <ul class="navbar-nav ml-auto">
             <!-- Elemento de navegación: menú desplegable de búsqueda (solo visible XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none"> <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </a>
@@ -156,48 +156,15 @@ $rol = $_SESSION['rol'];
               </div>
             </li>
             <!-- Elemento de navegación: alertas -->
-            <li class="nav-item dropdown no-arrow mx-1"> <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <!-- Contador - Alertas --> <span class="badge badge-danger badge-counter">10+</span>
-              </a>
-              <!-- Menú desplegable - Alertas -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header"> Centro de alertas </h6>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary"> <i class="fas fa-file-alt text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">Diciembre 12, 2019</div>
-                    <span class="font-weight-bold">¡Un nuevo informe mensual
-                      está listo para descargar!</span>
-                  </div>
-                </a> <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-success"> <i class="fas fa-donate text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">Diciembre 7, 2019</div>
-                    $290.29 ¡Se han depositado $ 290.29 en su cuenta!
-                  </div>
-                </a> <a class="dropdown-item d-flex align-items-center" href="#">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-warning"> <i class="fas fa-exclamation-triangle text-white"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">Diciembre 2, 2019</div>
-                    Alerta de gasto: hemos notado un gasto inusualmente alto
-                    en su cuenta.
-                  </div>
-                </a> <a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todas las alertas</a>
-              </div>
-            </li>
-            <!-- Elemento de navegación - Mensajes -->
-            <li class="nav-item dropdown no-arrow mx-1"> <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <!-- Contador - Mensajes --> <span class="badge badge-danger badge-counter">200</span>
-              </a>
+            
+
+
+
+
+
+
+
+            
               <!-- Menú desplegable - Mensajes -->
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header"> Message Center </h6>

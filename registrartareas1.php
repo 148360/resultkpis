@@ -50,5 +50,5 @@ $mysqli->close();
 ?>
 
 <?php
-header("Location: /laboratorio2/Trabajar.php?id=$_POST[id]");
+header("Location: /laboratorio4/Trabajar.php?id=$_POST[id]");
 ?>

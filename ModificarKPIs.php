@@ -264,7 +264,7 @@ $kpi_id = $_GET['Id'];
         <div class="container-fluid">
           <!-- Encabezado de página -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Agregar KPI´s</h1>
+            <h1 class="h3 mb-0 text-gray-800">Edita KPI´s</h1>
             <a href="404.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar
               informe</a>
           </div>
@@ -273,7 +273,7 @@ $kpi_id = $_GET['Id'];
 
 
         <div class="container">
-          <h1>Ingresa los datos</h1>
+          <h1>Edita los datos</h1>
           <hr />
 
           <?php
