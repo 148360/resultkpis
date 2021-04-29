@@ -43,12 +43,12 @@ $rol = $_SESSION['rol'];
 
             <!-- Barra lateral: marca -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="principal.php">
-            <div> <img src="logore.jpg"  width="70%" height="100%" > </div>
-               <!-- <div class="sidebar-brand-icon rotate-n-15">
+                <div> <img src="logore.jpg" width="70%" height="100%"> </div>
+                <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <!--   <i class="fas fa-laugh-wink"></i> -->
-                   <!--   <i class="C:\xampp\htdocs\kpi\img\logo"></i> -->
-                   
-                  
+                <!--   <i class="C:\xampp\htdocs\kpi\img\logo"></i> -->
+
+
                 <div class="sidebar-brand-text mx-3"> <sup></sup></div>
             </a>
             <!--
@@ -104,7 +104,7 @@ $rol = $_SESSION['rol'];
                         <?php if ($rol == 1) { ?>
                             <a class="collapse-item" href="TrabajarKPIs.php">Trabajar con KPI's</a>
                         <?php } ?>
-                        
+
                         <?php if ($rol == 2) { ?>
                             <a class="collapse-item" href="ConsultasKPIs.php">Consultas KPI´s</a>
                         <?php } ?>
@@ -477,8 +477,22 @@ height="520" >
 
                         <?php
                         include "conexiongraf.php";
-                        
-                        $query = "SELECT 
+
+
+                        $empresa_id = $_SESSION['empresa_id'];
+                        if ($empresa_id == 1) {
+                            $query = "SELECT 
+                            kpi.id, 
+                            nombre,	 	
+                            AREA,
+                            actividad,
+                            (if(CHECK1 IS NULL,0,CHECK1)+ if(CHECK2 IS NULL,0,CHECK2)+ if(CHECK3 IS NULL,0,CHECK3)+ if(CHECK4 IS NULL,0,CHECK4)+if(CHECK5 IS NULL,0,CHECK5)) total
+                        FROM  kpi
+                        INNER JOIN usuarios ON kpi.usuario_id = usuarios.id
+                        GROUP BY id ";
+                        } else {
+
+                            $query = "SELECT 
                         kpi.id, 
                         nombre,	 	
                         AREA,
@@ -488,76 +502,76 @@ height="520" >
                     INNER JOIN usuarios ON kpi.usuario_id = usuarios.id
                     WHERE usuarios.empresa_id = {$_SESSION['empresa_id']}
                     GROUP BY id ";
+                        }
                         $result = $mysqli->query($query);
                         ?>
-<?php
-$categorias = array();
-$data = array();
+                        <?php
+                        $categorias = array();
+                        $data = array();
 
-while ($filas = mysqli_fetch_assoc($result)) {
-    array_push($categorias,"'".$filas['nombre']."'");
-    array_push($data,$filas['total']);
-}
-$categorias = implode(",",$categorias);
-$data = implode(",",$data);
-?>
+                        while ($filas = mysqli_fetch_assoc($result)) {
+                            array_push($categorias, "'" . $filas['nombre'] . "'");
+                            array_push($data, $filas['total']);
+                        }
+                        $categorias = implode(",", $categorias);
+                        $data = implode(",", $data);
+                        ?>
 
-<script type="text/javascript">
-const chart = Highcharts.chart('container', {
-    title: {
-        text: 'Chart.update'
-    },
-    subtitle: {
-        text: 'Plain'
-    },
-    xAxis: {
-        categories: [<?php echo $categorias; ?>]
-    },
-    series: [{
-        type: 'column',
-        colorByPoint: true,
-        data: [<?php echo $data;?>],
-        showInLegend: false
-    }]
-});
+                        <script type="text/javascript">
+                            const chart = Highcharts.chart('container', {
+                                title: {
+                                    text: 'Chart.update'
+                                },
+                                subtitle: {
+                                    text: 'Plain'
+                                },
+                                xAxis: {
+                                    categories: [<?php echo $categorias; ?>]
+                                },
+                                series: [{
+                                    type: 'column',
+                                    colorByPoint: true,
+                                    data: [<?php echo $data; ?>],
+                                    showInLegend: false
+                                }]
+                            });
 
-document.getElementById('plain').addEventListener('click', () => {
-    chart.update({
-        chart: {
-            inverted: false,
-            polar: false
-        },
-        subtitle: {
-            text: 'Plain'
-        }
-    });
-});
+                            document.getElementById('plain').addEventListener('click', () => {
+                                chart.update({
+                                    chart: {
+                                        inverted: false,
+                                        polar: false
+                                    },
+                                    subtitle: {
+                                        text: 'Plain'
+                                    }
+                                });
+                            });
 
-document.getElementById('inverted').addEventListener('click', () => {
-    chart.update({
-        chart: {
-            inverted: true,
-            polar: false
-        },
-        subtitle: {
-            text: 'Inverted'
-        }
-    });
-});
+                            document.getElementById('inverted').addEventListener('click', () => {
+                                chart.update({
+                                    chart: {
+                                        inverted: true,
+                                        polar: false
+                                    },
+                                    subtitle: {
+                                        text: 'Inverted'
+                                    }
+                                });
+                            });
 
-document.getElementById('polar').addEventListener('click', () => {
-    chart.update({
-        chart: {
-            inverted: false,
-            polar: true
-        },
-        subtitle: {
-            text: 'Polar'
-        }
-    });
-});
-
-		</script>
+                            document.getElementById('polar').addEventListener('click', () => {
+                                chart.update({
+                                    chart: {
+                                        inverted: false,
+                                        polar: true
+                                    },
+                                    subtitle: {
+                                        text: 'Polar'
+                                    }
+                                });
+                            });
+                        </script>
                     </body>
 
 
