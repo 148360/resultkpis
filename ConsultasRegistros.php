@@ -1,15 +1,14 @@
 <?php
 
-    session_start();
+session_start();
 
-    if(!isset($_SESSION['id'])){
+if (!isset($_SESSION['id'])) {
     header("Location: index.php");
-    
-    }
+}
 
 
-    $nombre = $_SESSION['nombre'];
-    $rol=$_SESSION['rol'];
+$nombre = $_SESSION['nombre'];
+$rol = $_SESSION['rol'];
 ?>
 
 
@@ -28,9 +27,7 @@
 
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -48,8 +45,8 @@
             <!-- Barra lateral: marca -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="principal.php">
                 <div class="sidebar-brand-icon rotate-n-15">
-                 <!--   <i class="fas fa-laugh-wink"></i> -->
-                 <i class="C:\xampp\htdocs\kpi\img\logo"></i>
+                    <!--   <i class="fas fa-laugh-wink"></i> -->
+                    <i class="C:\xampp\htdocs\kpi\img\logo"></i>
                 </div>
                 <div class="sidebar-brand-text mx-3">Result KPIs START <sup>2</sup></div>
             </a>
@@ -74,8 +71,7 @@
 
             <!-- Elemento de navegación: menú contraer páginas -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Panel de Control</span>
                 </a>
@@ -84,37 +80,37 @@
                         <h6 class="collapse-header">Menú de opciones:</h6>
 
 
-                      
-                        <?php if ($rol ==2) { ?>
+
+                        <?php if ($rol == 2) { ?>
                             <a class="collapse-item" href="AgregarKPIs.php">Agregar KPI´s</a>
                         <?php } ?>
 
-                        <?php if ($rol ==1) { ?>
+                        <?php if ($rol == 1) { ?>
                             <a class="collapse-item" href="AgregarKPIs.php">Agregar KPI´s</a>
                         <?php } ?>
 
-                        <?php if ($rol ==3) { ?>
-                        <a class="collapse-item" href="TrabajarKPIs.php">Trabajar con KPI's</a>
+                        <?php if ($rol == 3) { ?>
+                            <a class="collapse-item" href="TrabajarKPIs.php">Trabajar con KPI's</a>
                         <?php } ?>
 
-                        <?php if ($rol ==1) { ?>
-                        <a class="collapse-item" href="TrabajarKPIs.php">Trabajar con KPI's</a>
+                        <?php if ($rol == 1) { ?>
+                            <a class="collapse-item" href="TrabajarKPIs.php">Trabajar con KPI's</a>
                         <?php } ?>
 
-                        <?php if ($rol ==2) { ?>
-                        <a class="collapse-item" href="ConsultasKPIs.php">Consultas KPI´s</a>
+                        <?php if ($rol == 2) { ?>
+                            <a class="collapse-item" href="ConsultasKPIs.php">Consultas KPI´s</a>
                         <?php } ?>
 
-                        <?php if ($rol ==1) { ?>
-                        <a class="collapse-item" href="ConsultasKPIs.php">Consultas KPI´s</a>
+                        <?php if ($rol == 1) { ?>
+                            <a class="collapse-item" href="ConsultasKPIs.php">Consultas KPI´s</a>
                         <?php } ?>
 
-                        <?php if ($rol ==1) { ?>
-                        <a class="collapse-item" href="ConsultasRegistros.php">Consultas de registros</a>
+                        <?php if ($rol == 1) { ?>
+                            <a class="collapse-item" href="ConsultasRegistros.php">Consultas de registros</a>
                         <?php } ?>
 
-                        <?php if ($rol ==1) { ?>
-                        <a class="collapse-item" href="ControlUsuarios.php">Control de usuarios</a>
+                        <?php if ($rol == 1) { ?>
+                            <a class="collapse-item" href="ControlUsuarios.php">Control de usuarios</a>
                         <?php } ?>
 
 
@@ -135,7 +131,7 @@
                 Adicionales
             </div>
 
-            
+
             <!-- Elemento de navegación - Facebook -->
             <li class="nav-item">
                 <a class="nav-link" href="https://www.youtube.com/watch?v=DWcJFNfaw9c">
@@ -191,11 +187,9 @@
                     </button>
 
                     <!-- Búsqueda de barra superior -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -209,18 +203,14 @@
 
                         <!-- Elemento de navegación: menú desplegable de búsqueda (solo visible XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Menú desplegable - Mensajes -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -233,15 +223,13 @@
 
                         <!-- Elemento de navegación: alertas -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Contador - Alertas -->
                                 <span class="badge badge-danger badge-counter">10+</span>
                             </a>
                             <!-- Menú desplegable - Alertas -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Centro de alertas
                                 </h6>
@@ -284,22 +272,19 @@
 
                         <!-- Elemento de navegación - Mensajes -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Contador - Mensajes -->
                                 <span class="badge badge-danger badge-counter">200</span>
                             </a>
                             <!-- Menú desplegable - Mensajes -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -310,8 +295,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -322,8 +306,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -334,8 +317,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -352,15 +334,12 @@
 
                         <!-- Elemento de navegación: información del usuario -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nombre; ?> </span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
@@ -392,189 +371,188 @@
                     <!-- Encabezado de página -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Consultas de Registros</h1>
-                        <a href="404.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i>Generar informe</a>
+                        <a href="ReporteRegistros.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar informe</a>
                     </div>
 
-                    
 
-                    
+
+
 
                     <?php
-    //Conectamos a la db    
-    $mysqli = new mysqli("localhost", "root", "", "kpis");
-            if ($mysqli->connect_errno) {
-                echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    }
+                    //Conectamos a la db    
+                    $mysqli = new mysqli("localhost", "root", "", "kpis");
+                    if ($mysqli->connect_errno) {
+                        echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+                    }
 
-    $query = "SELECT kpi.*, usuarios.nombre usuario_nombre, empresa.nombre empresa_nombre
-    FROM kpi
-   INNER JOIN usuarios ON kpi.usuario_id=usuarios.id
-   INNER JOIN empresa ON usuarios.empresa_id=empresa.id  
-   order by kpi.id DESC ";
-    $result = $mysqli->query($query);
-    //Se ejecuta la consulta
-    
-    ?>
-    <table width: 100% class="table table-responsive table-striped">
-    
-        <thead>
-            
-               
-<th>Nombre</th>
-<th>Area</th>
-<th>Empresa</th>
-<th>Actividad</th>
-<th>Fecha de Creacion</th>
-<th>Fecha de Inicio</th>
-<th>Indicador1</th>
-<th>Fecha de Termino</th>
-<th>Indicador2</th>
-<th>Tarea 1</th>
-<th>Indicador3</th>
-<th>Tarea 2</th>
-<th>Indicador4</th>
-<th>Tarea 3</th>
-<th>Indicador5</th>
-<th>Detalles</th>
-<th>Comentarios</th>
+                    $query = "SELECT kpi.*, usuarios.nombre usuario_nombre, empresa.nombre empresa_nombre
+                           FROM kpi
+                           INNER JOIN usuarios ON kpi.usuario_id=usuarios.id
+                           INNER JOIN empresa ON usuarios.empresa_id=empresa.id  
+                           order by kpi.id DESC ";
+                    $result = $mysqli->query($query);
+                    //Se ejecuta la consulta
 
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            
+                    ?>
+                    <table width: 100% class="table table-responsive table-striped">
+
+                        <thead>
 
 
-      
+                            <th>Nombre</th>
+                            <th>Area</th>
+                            <th>Empresa</th>
+                            <th>Actividad</th>
+                            <th>Fecha de Creacion</th>
+                            <th>Fecha de Inicio</th>
+                            <th>Indicador1</th>
+                            <th>Fecha de Termino</th>
+                            <th>Indicador2</th>
+                            <th>Tarea 1</th>
+                            <th>Indicador3</th>
+                            <th>Tarea 2</th>
+                            <th>Indicador4</th>
+                            <th>Tarea 3</th>
+                            <th>Indicador5</th>
+                            <th>Detalles</th>
+                            <th>Comentarios</th>
+
+                            <th></th>
+                            <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
 
 
 
-                <?php
-                    if($result->num_rows > 0){
-                        while($row = $result->fetch_assoc()){
-                ?>
-                <tr>
-                <td>
-                    <?php echo $row['usuario_nombre']?>
-                </td>
-<td>
-                    <?php echo $row['area']?>
-                </td>
-<td>
-                    <?php echo $row['empresa_nombre']?>
-                </td>
-<td>
-                    <?php echo $row['actividad']?>
-                </td>
-<td>
-                    <?php echo date_format(date_create($row['fechadecreacion']), 'Y-m-d')?>
-                </td>
-                <td>
-                    <?php echo date_format(date_create($row['fechadeinicio']), 'Y-m-d')?>
-                </td>
-
-                <td>
-                    <?php echo $row['check1']?>
-                </td>
-
-
- 		    <td>
-                    <?php echo date_format(date_create($row['fechadetermino']), 'Y-m-d')?>
-                </td>
-
-                <td>
-                    <?php echo $row['check2']?>
-                </td>
 
 
 
-                <td>
-                    <?php echo $row['tarea1']?>
-                </td>
+
+                            <?php
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                            ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $row['usuario_nombre'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['area'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['empresa_nombre'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row['actividad'] ?>
+                                        </td>
+                                        <td>
+                                            <?php echo date_format(date_create($row['fechadecreacion']), 'Y-m-d') ?>
+                                        </td>
+                                        <td>
+                                            <?php echo date_format(date_create($row['fechadeinicio']), 'Y-m-d') ?>
+                                        </td>
+
+                                        <td>
+                                            <?php echo $row['check1'] ?>
+                                        </td>
 
 
-                <td>
-                    <?php echo $row['check3']?>
-                </td>
+                                        <td>
+                                            <?php echo date_format(date_create($row['fechadetermino']), 'Y-m-d') ?>
+                                        </td>
 
-
-
-                <td>
-                    <?php echo $row['tarea2']?>
-                </td>
-
-
-                <td>
-                    <?php echo $row['check4']?>
-                </td>
-
-
-                <td>
-                    <?php echo $row['tarea3']?>
-                </td>
-
-
-                <td>
-                    <?php echo $row['check5']?>
-                </td>
-
-
-                <td>
-                    <?php echo $row['detalles']?>
-                </td>
-
-                <td>
-                    <?php echo $row['comentarios']?>
-                </td>
-
-
-                <td>
-                    <a class="btn btn-danger" href="BorrarRegistros.php?Id=<?php echo $row["id"]?>">Borrar</a>
-                </td>
-
-                <td>
-                    <a class="btn btn-warning" href="ModificarKPIs.php?Id=<?php echo $row["id"]?>">Editar</a>
-                </td>
-                
-                </tr>
-                <?php
-                        }//fin del while
-                    } //fin del if
-                ?>
-            
-        </tbody>
+                                        <td>
+                                            <?php echo $row['check2'] ?>
+                                        </td>
 
 
 
-        <tfoot>
-            <tr>
-<th>Nombre</th>
-<th>Area</th>
-<th>Empresa</th>
-<th>Actividad</th>
-<th>Fecha de Creacion</th>
-<th>Fecha de Inicio</th>
-<th>Indicador1</th>
-<th>Fecha de Termino</th>
-<th>Indicador2</th>
-<th>Tarea 1</th>
-<th>Indicador3</th>
-<th>Tarea 2</th>
-<th>Indicador4</th>
-<th>Tarea 3</th>
-<th>Indicador5</th>
-<th>Detalles</th>
-<th>Comentarios</th>
-                
-                <th></th>
-            </tr>
-        </tfoot>
-    </table>
+                                        <td>
+                                            <?php echo $row['tarea1'] ?>
+                                        </td>
 
-                            
+
+                                        <td>
+                                            <?php echo $row['check3'] ?>
+                                        </td>
+
+
+
+                                        <td>
+                                            <?php echo $row['tarea2'] ?>
+                                        </td>
+
+
+                                        <td>
+                                            <?php echo $row['check4'] ?>
+                                        </td>
+
+
+                                        <td>
+                                            <?php echo $row['tarea3'] ?>
+                                        </td>
+
+
+                                        <td>
+                                            <?php echo $row['check5'] ?>
+                                        </td>
+
+
+                                        <td>
+                                            <?php echo $row['detalles'] ?>
+                                        </td>
+
+                                        <td>
+                                            <?php echo $row['comentarios'] ?>
+                                        </td>
+
+
+                                        <td>
+                                            <a class="btn btn-danger" href="BorrarRegistros.php?Id=<?php echo $row["id"] ?>">Borrar</a>
+                                        </td>
+
+                                        <td>
+                                            <a class="btn btn-warning" href="ModificarKPIs.php?Id=<?php echo $row["id"] ?>">Editar</a>
+                                        </td>
+
+                                    </tr>
+                            <?php
+                                } //fin del while
+                            } //fin del if
+                            ?>
+
+                        </tbody>
+
+
+
+                        <tfoot>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Area</th>
+                                <th>Empresa</th>
+                                <th>Actividad</th>
+                                <th>Fecha de Creacion</th>
+                                <th>Fecha de Inicio</th>
+                                <th>Indicador1</th>
+                                <th>Fecha de Termino</th>
+                                <th>Indicador2</th>
+                                <th>Tarea 1</th>
+                                <th>Indicador3</th>
+                                <th>Tarea 2</th>
+                                <th>Indicador4</th>
+                                <th>Tarea 3</th>
+                                <th>Indicador5</th>
+                                <th>Detalles</th>
+                                <th>Comentarios</th>
+
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
 
 
 
@@ -612,8 +590,7 @@
     </a>
 
     <!-- Modal de cierre de sesión-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

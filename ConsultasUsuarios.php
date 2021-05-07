@@ -367,7 +367,7 @@ $rol = $_SESSION['rol'];
                     <!-- Encabezado de página -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Consultas de Usuarios en el Sistema</h1>
-                        <a href="404.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar informe</a>
+                        <a href="ReporteUsuarios.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Generar informe</a>
                     </div>
 
 
