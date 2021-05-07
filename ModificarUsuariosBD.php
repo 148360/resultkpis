@@ -18,5 +18,5 @@ nombre='{$nombre}', descripcion='{$descripcion}' WHERE id={$id}";
 } else {
   echo "Error al guardar la actualizacion: " . $mysqli->error;
 }
-
+header ('Location: ConsultasUsuarios.php');
 $mysqli->close();
